@@ -15,9 +15,9 @@ const BlogCard = ({ blog }: Props) => {
           <h1 className="group-hover:underline text-primary-01 header text-2xl">
             {RichText.render(blog.title)}
           </h1>
-          <p className="text-[17px] mt-4 md:max-w-[80%]">
+          <article className="text-[17px] mt-4 md:max-w-[80%]">
             {RichText.render(blog.excerpt)}
-          </p>
+          </article>
           <p className="mt-3 italic">
             {blog?._meta.firstPublicationDate
               ? new Date(blog?._meta.firstPublicationDate)

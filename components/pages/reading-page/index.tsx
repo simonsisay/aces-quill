@@ -35,9 +35,9 @@ const ReadingPage = ({ data }: Props) => {
           <MdCategory color="#252525" className="text-xl mr-2" />
           <p>{RichText.render(data.category)}</p>
         </div>
-        <div className="mb-12 mt-6 text-lg">
+        <article className="mb-12 mt-6 text-lg">
           <p>{RichText.render(data.writting)}</p>
-        </div>
+        </article>
         <div className="rating flex items-center">
           <p className="text-[18px]"> My Rating: {data.rating}/5</p>
           <BsStarFill color="orange" className="text-lg ml-3" />

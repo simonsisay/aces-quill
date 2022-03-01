@@ -1,5 +1,6 @@
 import { GraphQLErrors } from "@apollo/client/errors";
 import { Params } from "next/dist/server/router";
+import Head from "next/head";
 import ReadingPage from "../../components/pages/reading-page";
 import { getBlogById, getBlogs } from "../../lib/blog";
 import { Blogs } from "../../src/types/generated/graphql";
@@ -36,15 +37,21 @@ type Props = {
 
 const Blog = ({ data, errors }: Props) => {
   return (
-    <main className="w-[90%] max-w-[768px] mx-auto py-8">
-      {data ? (
-        <ReadingPage data={data} />
-      ) : (
-        <p className="mx-auto my-8">
-          Something went wrong please refresh the page
-        </p>
-      )}
-    </main>
+    <>
+      <Head>
+        <title>Blog | {data?.title}</title>
+        <meta name="description" content={data?.excerpt}></meta>
+      </Head>
+      <main className="w-[90%] max-w-[768px] mx-auto py-8">
+        {data ? (
+          <ReadingPage data={data} />
+        ) : (
+          <p className="mx-auto my-8">
+            Something went wrong please refresh the page
+          </p>
+        )}
+      </main>
+    </>
   );
 };
 
