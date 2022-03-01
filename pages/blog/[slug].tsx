@@ -36,23 +36,27 @@ type Props = {
 };
 
 const Blog = ({ data, errors }: Props) => {
-  return (
-    <>
-      <Head>
-        <title>Blog | {data?.title}</title>
-        <meta name="description" content={data?.excerpt}></meta>
-      </Head>
+  if (data) {
+    return (
+      <>
+        <Head>
+          <title>Blog | {data?.title}</title>
+          <meta name="description" content={data?.excerpt}></meta>
+        </Head>
+        <main className="w-[90%] max-w-[768px] mx-auto py-8">
+          <ReadingPage data={data} />)
+        </main>
+      </>
+    );
+  } else {
+    return (
       <main className="w-[90%] max-w-[768px] mx-auto py-8">
-        {data ? (
-          <ReadingPage data={data} />
-        ) : (
-          <p className="mx-auto my-8">
-            Something went wrong please refresh the page
-          </p>
-        )}
+        <p className="mx-auto my-8">
+          Something went wrong please refresh the page
+        </p>
       </main>
-    </>
-  );
+    );
+  }
 };
 
 export default Blog;
