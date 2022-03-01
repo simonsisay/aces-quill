@@ -1,6 +1,7 @@
 import { GraphQLErrors } from "@apollo/client/errors";
 import { Params } from "next/dist/server/router";
 import Head from "next/head";
+import { RichText } from "prismic-reactjs";
 import ReadingPage from "../../components/pages/reading-page";
 import { getBlogById, getBlogs } from "../../lib/blog";
 import { Blogs } from "../../src/types/generated/graphql";
@@ -40,11 +41,11 @@ const Blog = ({ data, errors }: Props) => {
     return (
       <>
         <Head>
-          <title>Blog | {data?.title}</title>
-          <meta name="description" content={data?.excerpt}></meta>
+          <title>Blog | {RichText.asText(data?.title)}</title>
+          <meta name="description" content={RichText.asText(data?.excerpt)} />
         </Head>
         <main className="w-[90%] max-w-[768px] mx-auto py-8">
-          <ReadingPage data={data} />)
+          <ReadingPage data={data} />
         </main>
       </>
     );
