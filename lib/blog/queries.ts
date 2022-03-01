@@ -41,3 +41,16 @@ export const BLOG_QUERY = gql`
     }
   }
 `;
+
+export const ABOUT_QUERY = gql`
+  query allAbouts {
+    allAbouts {
+      edges {
+        node {
+          about
+          photo
+        }
+      }
+    }
+  }
+`;
