@@ -9,7 +9,7 @@ type Props = {
 
 const BlogCard = ({ blog }: Props) => {
   return (
-    <Link href={`/blog/${blog._meta.uid}`}>
+    <Link href={`/blog/${blog._meta.uid}`} passHref>
       <div className="w-full flex flex-col mb-12 cursor-pointer ">
         <div className="group flex-1">
           <h1 className="group-hover:underline text-primary-01 header text-2xl">

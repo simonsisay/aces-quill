@@ -26,6 +26,7 @@ const ReadingPage = ({ data }: Props) => {
         </h1>
         <div className="mb-8 relative w-full h-[40vh]">
           <Image
+            alt={RichText.asText(data.title)}
             layout="fill"
             src={data.blog_thumbnail.url || placeholderImage}
           />

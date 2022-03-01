@@ -21,7 +21,7 @@ const HomePage = ({ data }: Props) => {
         </div>
         <div className="md:text-lg">
           <p className="">
-            Hi, I'm Betsi. <p className="md:inline">Welcome to my blog.</p>{" "}
+            Hi, I&apos;m Betsi. <p className="md:inline">Welcome to my blog.</p>{" "}
             <p>I write about books I read.</p>
           </p>
           <div className="mt-3 flex w-[50%] md:w-[34%] text-primary-01 justify-between text-2xl">
