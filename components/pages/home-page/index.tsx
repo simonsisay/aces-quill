@@ -25,7 +25,11 @@ const HomePage = ({ data }: Props) => {
             <p>I write about books I read.</p>
           </p>
           <div className="mt-3 flex w-[50%] md:w-[34%] text-primary-01 justify-between text-2xl">
-            <a target="_blank" href="https://www.instagram.com/betselot5656/">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://www.instagram.com/betselot5656/"
+            >
               <AiFillInstagram className="cursor-pointer hover:scale-101" />
             </a>
             <BsTwitter className="cursor-pointer hover:scale-101" />
