@@ -10,8 +10,16 @@ type Props = {
 const BlogCard = ({ blog }: Props) => {
   return (
     <Link href={`/blog/${blog._meta.uid}`} passHref>
-      <div className="w-full flex flex-col mb-12 cursor-pointer ">
-        <div className="group flex-1">
+      <div className="w-full flex items-center mb-12 cursor-pointer ">
+        <div className="relative md:w-[140px] h-[100%] max-h-[120px] md:mr-6">
+          <Image
+            layout={"responsive"}
+            width={"100%"}
+            height={"100%"}
+            src={blog.blog_thumbnail.url}
+          />
+        </div>
+        <div className="group flex flex-col flex-1">
           <h1 className="group-hover:underline text-primary-01 header text-2xl">
             {RichText.render(blog.title)}
           </h1>
