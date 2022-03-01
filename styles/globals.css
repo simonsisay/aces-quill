@@ -1,16 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", sans-serif;
+  color: #060815;
+  letter-spacing: 0.3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a {
+  margin: 0px;
+  padding: 0px;
 }
 
 a {
   color: inherit;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: underline;
+}
+
+a::after {
+  content: "";
+  width: 100%;
+  height: 6px;
+  background-color: #00bcd4;
+  position: absolute;
+  top: 80%;
+  left: 0px;
+  transform: translateX(-100%);
+  transition: all 0.4s ease;
+}
+
+a:hover {
   text-decoration: none;
+}
+
+a:hover:after {
+  transform: translate(0px);
 }
 
 * {
   box-sizing: border-box;
+}
+
+.text-big {
+  font-size: 3rem;
+}
+
+.header {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }

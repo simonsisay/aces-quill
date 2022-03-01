@@ -1,0 +1,18 @@
+overwrite: true
+schema:
+  - https://literal-talks.prismic.io/graphql:
+      customFetch: "codegen-prismic-fetch"
+      method: GET
+      headers:
+        Authorization: "Token ${PRISMIC_API_KEY}"
+        Prismic-Ref: "Yh1V6xEAACUA-Ix2"
+generates:
+  # Schema
+  ./schema.graphql:
+    plugins:
+      - schema-ast
+  src/types/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
