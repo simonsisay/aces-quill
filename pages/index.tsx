@@ -27,7 +27,7 @@ const Home: NextPage<Props> = ({ data, error, about }) => {
   return (
     <div>
       <Head>
-        <title>Literal Talks</title>
+        <title>Ace's Quill</title>
         <meta
           name="description"
           content=" Join me on a journey through words, where imagination knows no bounds."
