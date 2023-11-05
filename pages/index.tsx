@@ -28,7 +28,10 @@ const Home: NextPage<Props> = ({ data, error, about }) => {
     <div>
       <Head>
         <title>Literal Talks</title>
-        <meta name="description" content="Book reviews and blog by betsi" />
+        <meta
+          name="description"
+          content=" Join me on a journey through words, where imagination knows no bounds."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="w-[90%] flex justify-center items-center max-w-[1268px] mx-auto py-8">
