@@ -34,8 +34,8 @@ const HomePage = ({ data, about }: Props) => {
         </div>
       </div>
       <div className="flex flex-col">
-        {data.map((blog) => (
-          <div className="max-w-[650px]">
+        {data.map((blog, i) => (
+          <div className="max-w-[650px]" key={i}>
             <BlogCard blog={blog} key={blog._meta.uid} />
           </div>
         ))}
