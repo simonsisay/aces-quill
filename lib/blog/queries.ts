@@ -13,8 +13,6 @@ export const BLOGS_QUERY = gql`
           excerpt
           blog_thumbnail
           writting
-          category
-          rating
         }
       }
     }
@@ -34,8 +32,6 @@ export const BLOG_QUERY = gql`
           excerpt
           blog_thumbnail
           writting
-          category
-          rating
         }
       }
     }

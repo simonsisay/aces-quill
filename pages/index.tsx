@@ -31,7 +31,7 @@ const Home: NextPage<Props> = ({ data, error, about }) => {
         <meta name="description" content="Book reviews and blog by betsi" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="w-[90%] max-w-[768px] mx-auto py-8">
+      <main className="w-[90%] flex justify-center items-center max-w-[1268px] mx-auto py-8">
         {data && <HomePage about={about} data={data} />}
         {error && (
           <div className="m-auto">
