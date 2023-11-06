@@ -25,7 +25,7 @@ type Props = {
 
 const Home: NextPage<Props> = ({ data, error, about }) => {
   return (
-    <div>
+    <div className="bg-[#E7E2E0]">
       <Head>
         <title>{"Ace's Quill"}</title>
         <meta
@@ -38,7 +38,7 @@ const Home: NextPage<Props> = ({ data, error, about }) => {
         {data && <HomePage about={about} data={data} />}
         {error && (
           <div className="m-auto">
-            <h1> Something went wrong, Please refresh the page</h1>
+            <h1 className="">Something went wrong, Please refresh the page</h1>
           </div>
         )}
       </main>

@@ -39,7 +39,7 @@ type Props = {
 const Blog = ({ data, errors }: Props) => {
   if (data) {
     return (
-      <>
+      <div className="bg-[#E7E2E0]">
         <Head>
           <title>Blog | {RichText.asText(data?.title)}</title>
           <meta name="description" content={RichText.asText(data?.excerpt)} />
@@ -47,7 +47,7 @@ const Blog = ({ data, errors }: Props) => {
         <main className="w-[90%] max-w-[768px] mx-auto py-8">
           <ReadingPage data={data} />
         </main>
-      </>
+      </div>
     );
   } else {
     return (

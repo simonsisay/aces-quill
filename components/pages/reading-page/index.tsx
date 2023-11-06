@@ -17,10 +17,10 @@ const ReadingPage = ({ data }: Props) => {
   return (
     <div className="mt-8">
       <Link href="/" passHref>
-        <BsArrowLeftSquareFill className="cursor-pointer text-primary-01 text-[2.3rem] header" />
+        <BsArrowLeftSquareFill className="cursor-pointer text-[#9b8074] text-[2.3rem] header" />
       </Link>
       <article className="blog my-20">
-        <h1 className="my-8 header text-center text-[2.4rem]">
+        <h1 className="my-8 text-[#60544f] header text-center text-[2.4rem]">
           {RichText.render(data.title)}
         </h1>
         <div className="mb-8 relative w-full h-[40vh]">
@@ -30,8 +30,8 @@ const ReadingPage = ({ data }: Props) => {
             src={data.blog_thumbnail.url || placeholderImage}
           />
         </div>
-        <div className="mb-12 mt-6 text-lg">
-          <p>{RichText.render(data.writting)}</p>
+        <div className="mb-12 mt-6 text-md">
+          <p className="text-[#494442]">{RichText.render(data.writting)}</p>
         </div>
       </article>
     </div>
