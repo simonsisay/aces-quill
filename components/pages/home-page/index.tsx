@@ -16,7 +16,7 @@ type Props = {
 const HomePage = ({ data, about }: Props) => {
   return (
     <div className="pb-20 max-w-[800px] w-[90%] flex justify-center items-center flex-col">
-      <div className="flex flex-col items-center mt-6 mb-10">
+      <div className="flex flex-col items-center mt-6 mb-5 md:mb-10">
         <div className="flex my-8 flex-col items-center md:flex-row justify-center">
           <div className="mb-4">
             <img
